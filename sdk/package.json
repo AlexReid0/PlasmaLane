@@ -1,0 +1,74 @@
+{
+  "name": "plasmalane-sdk",
+  "version": "0.1.0",
+  "description": "Scan-to-Pay stablecoin payment SDK for Plasma L1",
+  "license": "MIT",
+  "author": "PlasmaLane",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexReid0/PlasmaLane.git",
+    "directory": "sdk"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./qr": {
+      "import": {
+        "types": "./dist/qr.d.ts",
+        "default": "./dist/qr.js"
+      },
+      "require": {
+        "types": "./dist/qr.d.cts",
+        "default": "./dist/qr.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "viem": ">=2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "viem": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.6",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3",
+    "viem": "^2.23.2"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "keywords": [
+    "plasma",
+    "stablecoin",
+    "payment",
+    "qr-code",
+    "usdt",
+    "usdc",
+    "evm",
+    "web3"
+  ]
+}
