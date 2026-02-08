@@ -102,4 +102,4 @@ export const APP_DESCRIPTION = "Scan to Pay – stablecoin payments on Plasma";
  * In production, replace with your deployed domain.
  */
 export const BASE_URL =
-  process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_BASE_URL ?? "https://plasma-lane.vercel.app";
